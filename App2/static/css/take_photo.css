@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #feeb81;
+  width: 100vw;
+  height: 100vh;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-weight: bold;
+}
+
+#camera-and-control-panel {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#camera-container {
+  width: 533px;
+  aspect-ratio: 1.33;
+  border: 3px solid orange;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#camera-icon {
+  width: 10%;
+  animation: scaleAnimation 2s infinite alternate;
+}
+
+#video-element,
+#canvas-element {
+  flex: 1;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#control-panel {
+  width: 480px;
+  aspect-ratio: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+#control-panel > button {
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #ffb342;
+  cursor: pointer;
+}
+
+#control-panel > button:hover {
+  background-color: peachpuff;
+}
+
+#photo-form {
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+}
+
+#save-continue-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #ffb342;
+  cursor: pointer;
+}
+
+#save-continue-button:hover {
+  background-color: peachpuff;
+}
+
+@media (max-width: 427px) {
+  #camera-container {
+    width: 90%;
+  }
+
+  #control-panel {
+    width: 90%;
+    aspect-ratio: 1.5;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  #control-panel > button,
+  #photo-form {
+    width: 50%;
+  }
+}

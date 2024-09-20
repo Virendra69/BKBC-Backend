@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #feeb81;
+  width: 100vw;
+  height: 100vh;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-weight: bold;
+}
+
+#logo {
+  width: 100vw;
+  aspect-ratio: 20;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo-jpg {
+  height: 90%;
+  margin-left: 0.3%;
+}
+
+#guidelines {
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+  cursor: pointer;
+  animation: colorChange 0.75s infinite;
+}
+
+@keyframes colorChange {
+  0% { color: black; }
+  /* 50% { color: white; } */
+  100% { color: white; }
+}
+
+#sign-in-container {
+  position: relative;
+  width: 100vw;
+  height: inherit;
+}
+
+#design-6 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  animation: rotation 30s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+#error-message {
+  color: red;
+  margin-bottom: 3%;
+}
+
+#sign-in-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-in-title {
+  font-size: 60px;
+  margin-bottom: 2.5%;
+}
+
+#user_name,
+#password,
+#submit {
+  width: 60%;
+  aspect-ratio: 6;
+  border-radius: 20px;
+}
+
+#user_name,
+#password {
+  padding: 0% 2.5%;
+  box-sizing: border-box;
+}
+
+#password {
+  margin: 3% 0%;
+}
+
+#submit {
+  background-color: #ffb342;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: peachpuff;
+}
+
+@media (max-width: 430px) {
+  #logo {
+    height: 50px;
+  }
+
+  #design-6 {
+    top: 50%;
+    width: 80%;
+  }
+
+  #sign-in-box {
+    top: 50%;
+    width: 60%;
+  }
+
+  #sign-in-title {
+    font-size: 28px;
+  }
+}
