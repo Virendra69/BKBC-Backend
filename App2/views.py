@@ -578,7 +578,8 @@ def getURLAPI(request):
     obj.save()
     return Response({"blessing_card_url": image_url})
 
-# Resolves the image path from the token value when some opens the blessing card link and displays it in their browser
+# Resolves the image path from the token value when some opens the blessing card link
+# and displays the image on their browser
 @api_view(["GET"])
 def getCard(request, token):
     try:
